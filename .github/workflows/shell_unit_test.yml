@@ -13,6 +13,8 @@ jobs:
       uses: vargiuscuola/gen-sh-unittest@master
     - name: gensh-unittest result
       run: echo "The result of gensh-unittest Action was ${{ steps.action-gen-sh-unittest.outputs.result }}"
+    - name: Run Shell Script Tests
+      run: bash test_combined_gpg_management.sh
     - name: Commit files
       run: |
         echo ${{ github.ref }}
