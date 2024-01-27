@@ -8,13 +8,17 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v3
-    - name: Github Action gen-sh-unittest
-      id: action-gen-sh-unittest
-      uses: vargiuscuola/gen-sh-unittest@master
-    - name: gensh-unittest result
-      run: echo "The result of gensh-unittest Action was ${{ steps.action-gen-sh-unittest.outputs.result }}"
+    - name: Bash shell beautifier
+      uses: illvart/beautysh-action@v1.0.0
     - name: Run Shell Script Tests
       run: bash combined_gpg_management.sh
+    - name: Generate list using Markdown
+      run: |
+       echo "This is the lead in sentence for the list" >> $GITHUB_STEP_SUMMARY
+       echo "" >> $GITHUB_STEP_SUMMARY # this is a blank line
+       echo "- Lets add a bullet point" >> $GITHUB_STEP_SUMMARY
+       echo "- Lets add a second bullet point" >> $GITHUB_STEP_SUMMARY
+       echo "- How about a third one?" >> $GITHUB_STEP_SUMMARY
     - name: Commit files
       run: |
         echo ${{ github.ref }}
