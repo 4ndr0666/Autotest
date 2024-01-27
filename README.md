@@ -1,25 +1,16 @@
 # Shell Script Testing Repository
 
 ## Overview
-This repository contains a shell script and an automated testing setup using GitHub Actions. The purpose is to ensure that any changes to the script maintain its functionality and integrity.
+This repository contains the `combined_gpg_management.sh` shell script and a setup for automated testing using GitHub Actions.
 
-## Testing Workflow
-The `.github/workflows/shell_unit_test.yml` file defines a GitHub Actions workflow that automatically tests the shell script upon every push to the repository.
+## Automated Testing
+The `.github/workflows/shell_unit_test.yml` file defines the automated testing process. It triggers on every push to the repository, running unit tests to verify the functionality of the `combined_gpg_management.sh` script.
 
-### How It Works
-- On every push, GitHub Actions triggers the workflow.
-- The workflow runs unit tests on the shell script using the `gen-sh-unittest` action.
-- Test results are outputted for review.
-- If there are changes (like test reports), the workflow commits and pushes these back to the repository.
+### Workflow Details
+- **Trigger**: On every push to the repository.
+- **Test Execution**: Runs unit tests written for `combined_gpg_management.sh`.
+- **Results**: Outputs the results of the unit tests for review.
 
-## Running the Tests Locally
-To run the tests on your local machine, [describe how to run the tests locally, including any dependencies or setup required].
+## Running Tests Locally
+To run the tests locally, [provide instructions on how to run the unit tests for your script].
 
-## Contributing
-Feel free to contribute to this repository. Before pushing your changes, ensure that:
-- Your code adheres to the existing style.
-- You have tested your changes locally.
-- The automated tests pass without any errors.
-
-## Feedback
-If you encounter any issues or have suggestions, please open an issue or a pull request.
