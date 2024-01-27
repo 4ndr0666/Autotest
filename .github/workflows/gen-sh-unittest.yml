@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@v1.10.0
+      uses: actions/checkout@v3
     - name: Github Action gen-sh-unittest
       id: action-gen-sh-unittest
       uses: vargiuscuola/gen-sh-unittest@master
