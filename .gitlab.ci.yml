@@ -1,0 +1,20 @@
+stages:
+  - build
+  - test
+  - deploy
+
+build_job:
+  stage: build
+  script:
+    - echo "Compiling the code..."
+
+test_job:
+  stage: test
+  script:
+    - echo "Running tests..."
+    - pytest
+
+deploy_job:
+  stage: deploy
+  script:
+    - echo "Deploying to server..."
