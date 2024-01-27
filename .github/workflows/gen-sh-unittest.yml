@@ -12,7 +12,7 @@ jobs:
       id: action-gen-sh-unittest
       uses: vargiuscuola/gen-sh-unittest@master
     - name: gensh-unittest result
-      run: echo "The result of gensh-unittest Action was ${{ steps.action-gen-sh-unittest.outputs.result }}" >> $GITHUB_STEP_SUMMARY
+      run: echo "The result of gensh-unittest Action was ${{ steps.action-gen-sh-unittest.outputs.result }}" 
     - name: Commit files
       run: |
         echo ${{ github.ref }}
